@@ -1,0 +1,6 @@
+﻿services:
+  main-api:
+    image: main-api
+    build:
+      context: .
+      dockerfile: WebApplicationFundamental/Dockerfile
