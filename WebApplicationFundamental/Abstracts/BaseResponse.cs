@@ -32,6 +32,17 @@ public abstract class BaseResponse
         };
         return Results.Ok(response);
     }
+    
+    public static IResult Ok(string message)
+    {
+        var response = new Response<object>
+        {
+        Success = true,
+        Message = message,
+        Data = null
+        };
+        return Results.Ok(response);
+    }
 
     public static IResult BadRequest(string message)
     {
